@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minha Pagina</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+
+    body{
+      background-color:  whitesmoke;
+    }
+
+    .interface{
+      
+    }
+    .nav{
+      background-color: black;
+      height: 60px;
+
+    }
+
+    .nav a{
+      color: white;
+    }
+    .perfumes{
+      display: inline-block;
+      background-color: white;
+      width: 100%;
+    }
+
+    .slider{
+      animation: slider 9s ease-in-out 0s infinite;
+      height: 500px;
+      background-color: whitesmoke;
+      display: none;
+    }
+
+    @keyframes slider{ 
+      0%{
+        background-image: url('gucci1.jpg');
+      }
+      14%{
+        background-image: url('gucci2.jpg');
+      }
+      30%{
+        background-image: url('gucci3.jpg');
+      }
+      46%{
+        background-image: url('dior1.jpg');
+      }
+      60%{
+        background-image: url('dior2.jpg');
+      }
+      74%{
+        background-image: url('coco1.jpg');
+        }
+      90%{
+        background-image: url('coco2.jpg');
+      }
+      100%{
+        background-image: url('coco3.jpg');
+      }
+   }
+
+     table {
+      background-color: whitesmoke;
+    }
+    table tr{
+      border-bottom: 1px solid red;
+    }
+   
+    .footer{
+      overflow:auto;
+        background-color: black;
+        height: 100px;
+        color: white;
+    }
+
+    .footer a{
+      text-decoration: none;
+      color: white;
+    }
+
+ 
+    ul{
+      list-style: none;
+    }
+    li{
+      display: inline-block;
+      padding: 2%;
+      margin: 2%;
+    }
+    .miniatura>a>img{
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+    }
+   
+    .card1 .miniatura>a>img:hover{
+      border: 1px solid;
+      box-shadow: 0 1px 7px 3px red;
+    }
+
+    .card2 .miniatura>a>img:hover{
+      border: 1px solid;
+      box-shadow: 0 1px 7px 3px silver;
+
+    }
+
+     .card3 .miniatura>a>img:hover{
+      border: 1px solid;
+      box-shadow: 0 1px 7px 3px black;
+    }
+    .card1{
+      padding: 20px;
+      margin: 5px;
+    }
+    .card2{
+      padding: 20px;
+      margin: 5px;
+    }
+    .card3{
+      padding: 20px;
+      margin: 5px;
+    }
+    .card1:hover{
+      border:1px solid;
+      border-color: orange; 
+    }
+
+    .card2:hover{
+      border:1px solid;
+      border-color: orange;
+    }
+
+    .card3:hover{
+      border:1px solid;
+      border-color: orange;
+      padding: 20px;
+      
+    }
+
+     
+    .nav a{
+      text-decoration: none;
+      font-family: verdana;
+      font-size: 50px;
+      text-align: center;
+    }
+    img{
+      width: 200px;
+      height: 200px;
+    }
+    
+    img:hover{
+      zoom:150%;
+    }
+
+    legend{
+      font-size: 50px;
+      font-family: verdana;
+    }
+
+    input{
+      border:none;
+      background-color: black;
+      cursor: pointer;
+      color: black;
+      margin:10px;
+      padding:10px 20px ;
+      font-size: 16pt;
+      border-radius: 50px;
+      border:1px solid black;
+      color: white;
+      outline: none;
+      text-align: right;
+    }
+    
+    input[type="submit"]{
+      width: 150px;
+      height: 50px;
+      text-align: center;
+}
+
+    }
+
+    section#comprar{
+      border-radius: 3% 3% 3% 3%;
+    }
+
+    table{
+      text-align: center;
+    }
+
+    td{
+      padding: 0 10px;
+    }
+
+
+  </style>
+</head>
+<body onload="loader();">
+  
+   <div class="interface">
+    <nav class="nav">
+        <a href="#">Perferra,lda</a>
+</nav>
+      <center>
+        
+    <!-- Slide Show -->
+    <section class="slider">
+     
+    </section>
+
+    
+
+    <!-- Perfumes -->
+    <section class="perfumes" > <!-- action="http://192.168.0.164:8080/asi/script/show_parameters.jsp" -->
+       <form id="form" name="compra" enctype="multipart/data-form" method="GET" action="http://192.168.0.164:8080/asi/script/show_parameters.jsp">
+              <fieldset>
+                <legend>Perfumes</legend>,
+                 <ul>
+                  <li>
+                    <div class="card1">
+                      <img id="one" src="ferrari/ferrari-red.png" alt="Imagem não disponível (Ferrari Red)"/>
+                      <div class="miniatura" >
+                        <a onclick="trocaImagem('one','ferrari/ferrari-red-frasco.jpg');"><img src="ferrari/ferrari-red-frasco.jpg" alt="Imagem não disponível (LV)" /></a>
+                        <a onclick="trocaImagem('one','ferrari/ferrari-red-box.jpeg');"><img src="ferrari/ferrari-red-box.jpeg" alt="Imagem não disponível (LV)" /></a>
+                         <a onclick="trocaImagem('one','ferrari/ferrari-red.png');"><img src="ferrari/ferrari-red.png" alt="Imagem não disponível (LV)" /></a>
+                      </div>
+                      <p id="red">Ferrari Red <br><strong>1000 MT</strong></p>
+                      <p>
+                        <select id="cartao0" name="Ferrari Red"  oninput="calculo();">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card2">
+                      <img id="two" src="ferrari/ferrari-blackshine.jpg" alt="Imagem não disponível(Ferrari Black Shine)" />
+                      <div class="miniatura" >
+                        <a onclick="trocaImagem('two','ferrari/ferrari-blackshine-frasco.jpeg');"><img src="ferrari/ferrari-blackshine-frasco.jpeg" alt="Imagem não disponível (LV)" /></a>
+                        <a onclick="trocaImagem('two','ferrari/ferrari-blackshine-box.jpeg');"><img src="ferrari/ferrari-blackshine-box.jpeg" alt="Imagem não disponível (LV)" /></a>
+                         <a onclick="trocaImagem('two','ferrari/ferrari-blackshine.jpg');"><img src="ferrari/ferrari-blackshine.jpg" alt="Imagem não disponível (LV)" /></a>
+                      </div>
+                      <p id="shine">Ferrari Black Shine<br><strong>1250 MT</strong></p>
+                      <p>
+                        <select id="cartao1" name="Ferrari Black Shine" oninput="calculo();" required="">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card3">
+                      <img id="three" src="ferrari/ferrari-black-frasco.png" alt="Imagem não disponível (Ferrari Black)"/>
+                      <div class="miniatura" >
+                        <a onclick="trocaImagem('three','ferrari/ferrari-black-frasco.png');"><img src="ferrari/ferrari-black-frasco.png" alt="Imagem não disponível (LV)" /></a>
+                        <a onclick="trocaImagem('three','ferrari/ferrari-black-box.jpg');"><img src="ferrari/ferrari-black-box.jpg" alt="Imagem não disponível (LV)" /></a>
+                         <a onclick="trocaImagem('three','ferrari/ferrari-black.jpg');"><img src="ferrari/ferrari-black.jpg" alt="Imagem não disponível (LV)" /></a>
+                      </div>
+                      <p id="black">Ferrari Black<br><strong>1500 MT</strong></p>
+                      <p>
+                        <select id="cartao2" name="Ferrari Black" oninput="calculo();">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </p>
+                    </div>
+                  </li>
+                 </ul>
+                 <center>
+                  <div id="areaComprar" class="areaCompra">
+                    
+                     
+                    <table id="tab"> </table>
+
+                      <p >Valor Total:<input type="text"  id="valor" disabled> MT</p>
+
+                  <input type="submit" id="buy" value="Comprar" onclick="comprar();">
+                 </div>
+                 </center>
+              </fieldset>
+              <input type="hidden" id="totalCompra" name="total">
+            </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+     
+      <p>Powered by <a href="https://facebook.com/raymolide" target="_blank">Raimundo Molide</a></p>
+      <p>2019</p>
+      
+    </footer>
+  </center>
+   </div>
+
+  <script type="text/javascript">
+   
+
+
+    function calculo() {
+      var compra = document.getElementById('compra');
+      var qtd0 = parseInt(document.compra.cartao0.value);
+      var qtd1 = parseInt(document.compra.cartao1.value);
+      var qtd2 = parseInt(document.compra.cartao2.value);
+
+      var tabela = document.getElementById("tab");
+      
+
+      for (var i = 0; i <4; i++) {
+        tabela.deleteRow(-1) ;  
+      }
+
+      criarTabela("Descrição","Valor Unitario (MT)","Quantidade","SubTotal (MT)");
+       
+      if(document.compra.cartao0 && qtd0!=0){
+        var nome = document.compra.cartao0.name;
+        criarTabela(nome,"1000",qtd0,1000*qtd0);
+      }
+      if(document.compra.cartao1 && qtd1!=0){
+        var nome = document.compra.cartao1.name;
+        criarTabela(nome,"1250",qtd1,1250*qtd1);
+      }
+      if(document.compra.cartao2 && qtd2!=0){
+        var nome = document.compra.cartao2.name;
+        criarTabela(nome,"1500",qtd2,1500*qtd2);
+      }
+      var total = qtd0*1000+qtd1*1250+qtd2*1500
+      document.compra.valor.value= total;
+      var hideShow = document.getElementById('areaComprar');
+      if (total!=0){
+         hideShow.style.display='block';
+      }else{
+         hideShow.style.display='none';
+      }
+         
+ 
+       
+    }
+
+     
+    function criarTabela(t0,t1,t2,t3){
+
+      var tabela = document.getElementById("tab");
+
+      var row= tabela.insertRow(-1);
+      var desc = row.insertCell(0);
+      var unt = row.insertCell(1);
+      var qtd = row.insertCell(2);
+      var st = row.insertCell(3);
+      desc.appendChild(document.createTextNode(t0));
+      unt.appendChild(document.createTextNode(t1));
+      qtd.appendChild(document.createTextNode(t2));
+      st.appendChild(document.createTextNode(t3));
+    }
+
+    function trocaImagem(id,foto){
+      document.getElementById(id).src=foto;
+    }
+
+    function comprar(){
+            
+      var compra = document.getElementById('compra');
+      var qtd0 = parseInt(document.compra.cartao0.value);
+      var qtd1 = parseInt(document.compra.cartao1.value);
+      var qtd2 = parseInt(document.compra.cartao2.value);
+      var valor = 0;
+
+      qtd = qtd0+qtd1+qtd2;
+      valor= qtd0*1000+qtd1*1250+qtd2*1500;
+
+      document.compra.valor.value=valor;
+      document.getElementById('totalCompra').value = valor;
+      
+
+      if (valor==0) {
+        alert("Nenhum produto foi selecionado, por favor selecione pelo menos um produto");
+        rednt.prredntDefault();
+
+      }else{
+        alert("Voce comprou "+qtd+" Perfumes no valor de "+valor+" meticais");
+      }
+ 
+    }
+
+    function loader(){
+      var compra = document.getElementById('compra');
+      var qtd0 = parseInt(document.compra.cartao0.value);
+      var qtd1 = parseInt(document.compra.cartao1.value);
+      var qtd2 = parseInt(document.compra.cartao2.value);
+      var valor = 0;
+
+      var hideShow = document.getElementById('areaComprar');
+       hideShow.style.display='none';
+      
+    }
+    
+  </script>
+
+</body>
+</html>
